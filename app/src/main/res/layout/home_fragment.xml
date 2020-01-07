@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Fragments.HomeFragment">
+
+
+<androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerplant"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_below="@id/recyclerplant"
+        android:id="@+id/cardplant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>
