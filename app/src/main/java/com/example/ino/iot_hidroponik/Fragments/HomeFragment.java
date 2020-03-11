@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -20,9 +21,11 @@ import com.android.volley.toolbox.Volley;
 import com.example.ino.iot_hidroponik.Adapter.PlantAdapter;
 import com.example.ino.iot_hidroponik.MainActivity;
 import com.example.ino.iot_hidroponik.Model.Plant;
+import com.example.ino.iot_hidroponik.Model.User;
 import com.example.ino.iot_hidroponik.R;
 import com.example.ino.iot_hidroponik.RecyclerTouchListener;
 import com.example.ino.iot_hidroponik.SensorActivity;
+import com.example.ino.iot_hidroponik.SharedPrefManager;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -83,6 +86,9 @@ public class HomeFragment extends Fragment {
 
     private JsonArrayRequest getDataFromServer() {
 
+        User user = SharedPrefManager.getInstance(getActivity()).getUser();
+        final String id = user.getId();
+
         final ProgressBar progressBar = (ProgressBar) view.findViewById(R.id.progressBar1);
 
 
@@ -90,7 +96,7 @@ public class HomeFragment extends Fragment {
         progressBar.setIndeterminate(true);
 
 
-        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest("http://iot.dinus.ac.id/api/api/tanaman2", new Response.Listener<JSONArray>() {
+        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET,"http://iot.dinus.ac.id/api/api/tanaman?id="+id,null, new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {
                 //Calling method parseData to parse the json response

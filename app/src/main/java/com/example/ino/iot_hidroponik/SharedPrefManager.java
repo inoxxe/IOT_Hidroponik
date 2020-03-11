@@ -12,7 +12,7 @@ public class SharedPrefManager {
     //the constants
     private static final String SHARED_PREF_NAME = "iot_hidroponik";
     private static final String KEY_USERNAME = "keyusername";
-    private static final String KEY_ROLE = "role";
+    private static final String KEY_NAME = "name";
     private static final String KEY_PASS = "keypass";
     private static final String KEY_ID = "keyid";
 
@@ -37,7 +37,7 @@ public class SharedPrefManager {
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString(KEY_USERNAME, user.getUsername());
-        editor.putString(KEY_ROLE,user.getRole());
+        editor.putString(KEY_NAME,user.getName());
         editor.putString(KEY_PASS,user.getPassword());
         editor.putString(KEY_ID,user.getId());
 
@@ -55,7 +55,7 @@ public class SharedPrefManager {
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         return new User(
                 sharedPreferences.getString(KEY_USERNAME, null),
-                sharedPreferences.getString(KEY_ROLE,null),
+                sharedPreferences.getString(KEY_NAME,null),
                 sharedPreferences.getString(KEY_PASS,null),
                 sharedPreferences.getString(KEY_ID,null)
                 );

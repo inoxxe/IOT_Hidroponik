@@ -13,7 +13,6 @@
 
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/card1"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_gravity="center_horizontal"
@@ -29,7 +28,7 @@
                 android:layout_height="85dp"
                 android:layout_marginStart="10dp"
                 android:layout_centerVertical="true"
-                android:src="@drawable/leaf"
+                android:src="@drawable/icon_leaf_detail"
                 />
 
             <TextView
@@ -50,6 +49,7 @@
 
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardhum"
         android:layout_width="match_parent"
         android:layout_height="90dp"
         android:layout_gravity="center_horizontal"
@@ -109,6 +109,7 @@
     </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardtemp"
             android:layout_width="match_parent"
             android:layout_height="90dp"
             android:layout_gravity="center_horizontal"
@@ -171,6 +172,7 @@
 
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardwater"
             android:layout_width="match_parent"
             android:layout_height="90dp"
             android:layout_gravity="center_horizontal"
@@ -232,6 +234,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardph"
             android:layout_width="match_parent"
             android:layout_height="90dp"
             android:layout_gravity="center_horizontal"
@@ -280,6 +283,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardnut"
             android:layout_width="match_parent"
             android:layout_height="90dp"
             android:layout_gravity="center_horizontal"

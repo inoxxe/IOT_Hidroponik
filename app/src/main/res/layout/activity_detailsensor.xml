@@ -1,11 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.jjoe64.graphview.GraphView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="200dip"
-        android:id="@+id/graph" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <com.jjoe64.graphview.GraphView
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="200dip"
+            android:id="@+id/graph" />
 
-</LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rata-rata : "
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                />
+
+            <TextView
+                android:id="@+id/average"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="value"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/kesimpulan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kesimpulan :"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                />
+            <LinearLayout
+                android:id="@+id/kesimpulan1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+
+
+                <TextView
+                    android:id="@+id/day1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="- Hari 1-14 : "
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    />
+                <TextView
+                    android:id="@+id/value1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ph"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    />
+                <TextView
+                    android:id="@+id/kondisi1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Kurang"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/kesimpulan2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="- Hari 15-34 : "
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    />
+                <TextView
+                    android:id="@+id/value2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ph "
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    />
+                <TextView
+                    android:id="@+id/kondisi2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="normal"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</ScrollView>

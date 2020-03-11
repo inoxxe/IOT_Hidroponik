@@ -28,12 +28,11 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.profile_fragment, container, false);
-        imageView = view.findViewById(R.id.profile_image);
         textViewname = view.findViewById(R.id.profile_name);
         btnlogout = view.findViewById(R.id.buttonLogout);
 
         User user = SharedPrefManager.getInstance(getActivity()).getUser();
-        final String username = user.getUsername();
+        final String username = user.getName();
 
         textViewname.setText(username);
 

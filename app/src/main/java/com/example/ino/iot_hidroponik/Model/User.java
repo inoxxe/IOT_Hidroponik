@@ -4,11 +4,11 @@ package com.example.ino.iot_hidroponik.Model;
 
 public class User {
 
-    private String username,role,password,id;
+    private String username,name,password,id;
 
-    public User(String username, String role, String password, String id) {
+    public User(String username, String name, String password, String id) {
         this.username = username;
-        this.role = role;
+        this.name = name;
         this.password = password;
         this.id = id;
     }
@@ -21,12 +21,8 @@ public class User {
         this.username = username;
     }
 
-    public String getRole() {
-        return role;
-    }
-
-    public void setRole(String role) {
-        this.role = role;
+    public String getName() {
+        return name;
     }
 
     public String getPassword() {

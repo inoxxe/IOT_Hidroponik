@@ -5,9 +5,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
     <androidx.cardview.widget.CardView
-        android:layout_width="317dp"
-        android:layout_height="71dp"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
         android:layout_gravity="center_horizontal"
+        android:layout_margin="8dp"
         app:cardCornerRadius="5dp"
         app:cardElevation="5dp"
         app:cardMaxElevation="1dp"
@@ -19,10 +20,11 @@
 
             <ImageView
                 android:id="@+id/plantimage"
-                android:layout_width="98dp"
-                android:layout_height="30dp"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
                 android:layout_centerVertical="true"
-                android:src="@drawable/leaf"
+                android:src="@drawable/icon_list_leaf"
                 />
 
             <TextView
@@ -30,11 +32,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
                 android:layout_toRightOf="@id/plantimage"
                 android:text="Nama Tanaman"
                 android:textAlignment="textStart"
                 android:textColor="#000"
-                android:textSize="16sp"
+                android:textSize="20sp"
                 android:textStyle="normal" />
 
             <TextView
